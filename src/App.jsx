@@ -1,15 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-import ContactList from './components/ContactList'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import ContactForm from "./components/ContactForm";
+import ContactList from "./components/ContactList";
+import { ContactContextProvider } from "./components/context/ContactContext";
 
 function App() {
-
   return (
     <div className="App">
-      <ContactList/>
+      <ContactContextProvider>
+        <ContactForm />
+        <ContactList />
+      </ContactContextProvider>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

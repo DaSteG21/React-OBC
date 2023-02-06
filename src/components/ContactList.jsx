@@ -1,17 +1,21 @@
+import { useContext } from "react";
 import Contact from "./Contact";
-
-    let firstContact= {
-
-        name:'John',
-        lastName:'Doe',
-        email: 'doeJohn@carseba.com',
-        isConnected:true
-
-    }
+import { ContactContext } from "./context/ContactContext";
+import Header from "./Header";
 
 
-export default function ContactList(){
+export default function ContactList() {
+ 
+    const {contacts} = useContext(ContactContext)
 
-   return <Contact contact={firstContact}/>
-
+    return (
+    <>
+      <div className="contactContainer">
+        <Header />
+        {contacts.map((contact) => (
+          <Contact key= {contact.id} contact={contact} />
+        ))}
+      </div>
+    </>
+  );
 }

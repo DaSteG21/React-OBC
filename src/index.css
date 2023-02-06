@@ -1,70 +1,106 @@
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(44, 44, 92);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+Button {
+  background-color: rgb(113, 113, 197);
+  color: white;
+  border: 0px;
+  padding: 4px 4px;
+  width: fit-content;
+  margin: auto;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+Button:hover {
+  background-color: rgb(137, 137, 233);
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: 20px auto;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 0px 10px 10px;
+}
+
+.contactForm input {
+  border-radius: 2px;
+  margin-bottom: 2px;
+  padding: 4px 8px;
+}
+.contactForm select {
+  border-radius: 6px;
+  margin-bottom: 2px;
+  padding: 3px 3px;
+}
+
+.titleBar {
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.33em;
+  padding: 10px 0px;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-style: solid;
+  border-width: 2px;
+  padding-bottom: 10px;
+  width: 60%;
+  margin: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.contactCard {
+  display: flex;
+  align-items: center;
+  margin: 10px 10px;
+  padding: 5px 10px;
+  border: 1px solid black;
+}
+
+.contactInfo {
+  padding-right: 20px;
+}
+.contactName {
+  font-size: 1.33em;
+  font-weight: bold;
+  margin: 3px 0px;
+}
+.contactEmail {
+  margin-top: 0px;
+  font-size: 0.67em;
+  color: #b3b3b3;
+}
+
+.status {
+  font-size: 0.67em;
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+
+.deleteButton {
+  color: red;
+  border: 0px;
+  background-color: transparent;
+  font-size: 40px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+.deleteButton:hover {
+  background-color: transparent;
+  color: rgb(211, 87, 87);
+  cursor: pointer;
 }
